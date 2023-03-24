@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <nav
+      class="flex flex-col w-full p-2 md:flex-row justify-between z-40 sticky relative"
+    >
+      <div class="logo-header flex justify-between">
+        <div class="flex flex-col items-center">
+          <h4 class="md:text-5xl font-light text-[#0a205c]">
+            <a href="#"> MIKALTO</a>
+          </h4>
+          <p>Hotel & Resort</p>
+        </div>
+        <button
+          class="navbar_toggle block md:hidden bg-[#0a205c] text-white hover:text-white p-5"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <ul
+        class="bg-[rgba(255,255,255,0.8)] md:bg-transparent main_nav hidden md:flex flex-col w-full md:w-[50%] md:flex-row justify-between p-5 absolute md:static top-[100%]"
+      >
+        <li class="mb-3 md:mb-0">
+          <a
+            href="#"
+            class="nav-links hover:bg-[#0a205c] hover:text-white rounded-lg p-3"
+            >Home</a
+          >
+        </li>
+        <li class="mb-3 md:mb-0">
+          <a
+            href="#"
+            class="nav-links hover:bg-[#0a205c] hover:text-white rounded-lg p-3"
+            >Our Room</a
+          >
+        </li>
+        <li class="mb-3 md:mb-0">
+          <a
+            href="#"
+            class="nav-links hover:bg-[#0a205c] hover:text-white rounded-lg p-3"
+            >Page</a
+          >
+        </li>
+        <li class="mb-3 md:mb-0">
+          <a
+            href="#"
+            class="nav-links hover:bg-[#0a205c] hover:text-white rounded-lg p-3"
+            >Feature</a
+          >
+        </li>
+        <li class="mb-3 md:mb-0">
+          <a
+            href="#"
+            class="nav-links hover:bg-[#0a205c] hover:text-white rounded-lg p-3"
+            >Blog</a
+          >
+        </li>
+        <li class="mb-3 md:mb-0">
+          <a
+            href="#"
+            class="nav-links hover:bg-[#0a205c] hover:text-white rounded-lg p-3"
+            >contact</a
+          >
+        </li>
+      </ul>
+      <div class="md:flex items-center justify-between hidden">
+        <div>
+          <h4 class="text-[#0a205c]">EN</h4>
+        </div>
+        <button class="p-5">
+          <i class="fas fa-regular fa-bag-shopping"></i>
+        </button>
+      </div>
+    </nav>
+
+    <section
+      class="landingSection bg-blue-200 flex flex-col md:flex-row items-center"
+    >
+      <div
+        class="landing-text flex p-6 flex-col items-start text-white md:w-1/2"
+      >
+        <div class="">
+          <h1 class="text-5xl md:text-7xl py-2">Enjoy Your Dream Vacations</h1>
+          <p class="md:text-2xl">Quiet and endlessly beautiful hideway</p>
+        </div>
+        <div class="flex justify-between items-center mt-5 md:w-[50%]">
+          <a href="#" class="hover:bg-white hover:text-black p-3">About Us</a>
+          <a href="#" class="hover:bg-white hover:text-black p-3"
+            >View HomeStay -></a
+          >
+        </div>
+      </div>
+      <div class="form md:w-1/2 h-[90vh] flex items-center">
+        <form class="md:w-1/2 bg-white flex flex-col md:py-12 justify-center">
+          <div class="flex flex-col items-start pl-5 py-5">
+            <h3 class="md:text-3xl">Search Room</h3>
+            <p>Get the Latest on Our COVID-19</p>
+          </div>
+
+          <div class="flex pl-5 py-5">
+            <div class="flex flex-col">
+              <div>
+                <i class="fas fa-regular fa-calendar"></i>
+                <label class="text-[#0a205c]" for="Checkin"
+                  >Checkin <sup class="text-red-500">*</sup></label
+                >
+              </div>
+              <input
+                placeholder="Check-in-Date"
+                type="text"
+                name="Checkin"
+                class="w-[90%] border-b-2"
+                onfocus="(this.type='date')"
+                id="date"
+              />
+            </div>
+            <div class="flex flex-col">
+              <div>
+                <i class="fas fa-regular fa-calendar"></i>
+                <label class="text-[#0a205c]" for="Checkout"
+                  >Checkout <sup class="text-red-500">*</sup></label
+                >
+              </div>
+              <input
+                placeholder="Check-in-Out"
+                type="text"
+                class="w-[90%] border-b-2"
+                name="Checkout"
+                onfocus="(this.type='date')"
+                id="date"
+              />
+            </div>
+          </div>
+
+          <div class="flex flex-col pl-5 py-5">
+            <div class="">
+              <i class="fa-solid fa-user"></i>
+              <label for="adults">Adults</label>
+            </div>
+            <select class="w-[90%]" name="adults">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="5">5+</option>
+            </select>
+          </div>
+          <div class="flex pl-5 flex-col justify-center">
+            <i class="fa-solid fa-user"></i>
+            <label for="Children">Children</label>
+            <select class="w-[90%]" name="Children">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="5">5+</option>
+            </select>
+          </div>
+          <div class="flex my-5 justify-center">
+            <button class="bg-[#0a205c] text-white p-3">
+              Check avaiablity
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="explore-Nature mt-6">
+      <div class="flex flex-col-reverse md:flex-row text-white">
+        <div class="bg-[#0a205c] md:w-1/2 flex flex-col justify-center p-4">
+          <p class="text-orange-600 py-4">OTHER ACTIVITIES</p>
+          <h1 class="text-2xl md:text-5xl">
+            Give yourself a smile- Smile & Wellness
+          </h1>
+          <p class="mt-5">
+            Proin nec leo vel metus faucibus vehicula. Donec vulputate in magna
+            eget egestas. Aliquam ac facilisis ante, sit amet tincidunt ante.
+            Fusce dolor sapien, sodales at velit non, lobortis volutpat ante.
+            Integer porta molestie volutpat. Etiam tristique, sem vitae
+            tincidunt gravida, eros nulla dapibus lacus, ut dapibus diam dui vel
+            tortor.
+          </p>
+          <div class="mt-6">
+            <a href="#" class="hover:bg-white rounded-lg hover:text-black p-3"
+              >Explore More</a
+            >
+          </div>
+        </div>
+        <div class="md:w-1/2"><img src="./img/hotel-3.svg" alt="hotel2" /></div>
+      </div>
+      <div class="flex flex-col md:flex-row text-white">
+        <div class="md:w-1/2">
+          <img src="./img/hotel-3.svg" alt="hotel2" class="w-full" />
+        </div>
+        <div class="bg-[#0a205c] md:w-1/2 flex flex-col justify-center p-4">
+          <p class="text-orange-600 py-4">RECONNECT WITH NATURE</p>
+          <h1 class="text-2xl md:text-5xl">
+            Experience a truly unforgettable holiday
+          </h1>
+          <p class="mt-5">
+            The wilderness and authenticity of this tiny village nestled between
+            steep mountain cliffs and miles and miles of beautiful beaches drew
+            foreign visitors like a magnet.
+          </p>
+          <ul>
+            <li>▪ Thermal water with ancient baths</li>
+            <li>▪ Turkish bath</li>
+            <li>▪ Turkish sauna</li>
+            <li>▪ Relax and therapy massage Book your stay</li>
+          </ul>
+          <div class="mt-6">
+            <a href="#" class="hover:bg-white rounded-lg hover:text-black p-3"
+              >Explore More</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="card mt-4">
+      <div class="flex flex-col items-center">
+        <h2 class="font-Bold italic">EXPERIENCE MATTERS</h2>
+        <p class="text-3xl">
+          Escape From the World see the Experience before you feel it, Discover
+          the luxury of hotel Miklto
+        </p>
+      </div>
+      <div class="flex">
+        <div class="card-1 p-4">
+          <div>
+            <img class="" src="./img/card-1.jpg" alt="" />
+          </div>
+          <p class="py-3">WELLNESS</p>
+          <h3 class="md:text-2xl py-3">Dedicated to wellness</h3>
+          <p class="">
+            Aman's approach to wellness is focused on personalisation, privacy
+            and seclusion. Local spa rituals with indigenous ingredients, offer
+            a profoundly therapeutic touch, and a gentle sense of discovery.
+          </p>
+          <a class="mt-3" href="#">Discover more →</a>
+        </div>
+        <div class="card-1 p-4">
+          <div>
+            <img class="" src="./img/card3.jpg" alt="" />
+          </div>
+          <p class="py-3">WELLNESS</p>
+          <h3 class="md:text-2xl py-3">Dedicated to wellness</h3>
+          <p class="">
+            Aman's approach to wellness is focused on personalisation, privacy
+            and seclusion. Local spa rituals with indigenous ingredients, offer
+            a profoundly therapeutic touch, and a gentle sense of discovery.
+          </p>
+          <a class="mt-3" href="#">Discover more →</a>
+        </div>
+        <div class="card-1 p-4">
+          <div>
+            <img class="" src="./img/card2.jpg" alt="" />
+          </div>
+          <p class="py-3">WELLNESS</p>
+          <h3 class="md:text-2xl py-3">Dedicated to wellness</h3>
+          <p class="">
+            Aman's approach to wellness is focused on personalisation, privacy
+            and seclusion. Local spa rituals with indigenous ingredients, offer
+            a profoundly therapeutic touch, and a gentle sense of discovery.
+          </p>
+          <a class="mt-3" href="#">Discover more →</a>
+        </div>
+        <div class="card-1 p-4">
+          <div>
+            <img class="" src="./img/card4.jpg" alt="" />
+          </div>
+          <p class="py-3">WELLNESS</p>
+          <h3 class="md:text-2xl py-3">Dedicated to wellness</h3>
+          <p class="">
+            Aman's approach to wellness is focused on personalisation, privacy
+            and seclusion. Local spa rituals with indigenous ingredients, offer
+            a profoundly therapeutic touch, and a gentle sense of discovery.
+          </p>
+          <a class="mt-3" href="#">Discover more →</a>
+        </div>
+      </div>
+      <div class="flex justify-center py-3">
+        <button class="border-2 p-2">View All Services →</button>
+      </div>
+    </section>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>
