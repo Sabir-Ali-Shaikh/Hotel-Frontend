@@ -7,6 +7,23 @@
 }
 
 .landingSection {
-  background: url(../img/bg.svg) no-repeat ;
+  background: url(../img/bg.svg) no-repeat;
   background-size: cover;
+}
+
+.say-hello {
+  background: url(../img/say-hello.jpg) no-repeat;
+  background-size: cover;
+}
+
+.bg-color {
+  background-color: #0a205c;
+}
+
+.bg-skin {
+  background-color: #fffaf6;
+}
+
+.text-lightblue{
+  color: #4966b8;
 }
