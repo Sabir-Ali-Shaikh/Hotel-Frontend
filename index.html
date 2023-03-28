@@ -89,14 +89,13 @@
         </button>
       </div>
     </nav>
-
     <section class="landingSection flex flex-col xl:flex-row items-center">
       <div
         class="landing-text flex p-6 flex-col items-start text-white xl:w-1/2"
       >
         <div class="text-center xl:text-start">
-          <h1 class="text-5xl xl:text-7xl py-2">Enjoy Your Dream Vacations</h1>
-          <p class="xl:text-2xl">Quiet and endlessly beautiful hideway</p>
+          <h1 class="text-5xl xl:text-7xl py-2"></h1>
+          <p class="xl:text-2xl"></p>
         </div>
         <div
           class="flex text-center justify-between items-center mt-5 w-full xl:w-[50%]"
@@ -108,7 +107,10 @@
         </div>
       </div>
       <div class="form xl:w-1/2 h-[90vh] flex xl:justify-center items-center">
-        <form class="xl:w-1/2 bg-white flex flex-col xl:py-12 justify-center">
+        <form
+          name="form"
+          class="xl:w-1/2 bg-white flex flex-col xl:py-12 justify-center"
+        >
           <div class="flex flex-col items-start pl-5 py-5">
             <h3 class="xl:text-3xl">Search Room</h3>
             <p>Get the Latest on Our COVID-19</p>
@@ -125,7 +127,8 @@
               <input
                 placeholder="Check-in-Date"
                 type="text"
-                name="Checkin"
+                name="checkin"
+                required
                 class="w-[90%] border-b-2"
                 onfocus="(this.type='date')"
                 id="date"
@@ -141,8 +144,9 @@
               <input
                 placeholder="Check-in-Out"
                 type="text"
+                required
                 class="w-[90%] border-b-2"
-                name="Checkout"
+                name="checkout"
                 onfocus="(this.type='date')"
                 id="date"
               />
@@ -158,21 +162,26 @@
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
-              <option value="5">5+</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
             </select>
           </div>
           <div class="flex pl-5 flex-col justify-center">
             <i class="fa-solid fa-user"></i>
             <label for="Children">Children</label>
-            <select class="w-[90%]" name="Children">
+            <select class="w-[90%]" name="children">
+              <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
-              <option value="5">5+</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
             </select>
           </div>
           <div class="flex my-5 justify-center">
-            <button class="bg-[#0a205c] hover:bg-[#0a546c] text-white p-3">
+            <button
+              class="sub-btn bg-[#0a205c] hover:bg-[#0a546c] text-white p-3"
+            >
               Check avaiablity
             </button>
           </div>
@@ -215,18 +224,17 @@
         />
       </div>
     </section>
-
     <section class="slider text-white mt-6">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div
-            class="swiper-slide bg-[#0a205c] flex xl:flex-row flex-col items-center"
+            class="swiper-slide slide-1 bg-[#0a205c] flex xl:flex-row flex-col items-center"
           >
             <div class="bg-[#0a205c] xl:w-1/2 p-6">
-              <h3 class="text-orange-600">Elegance and comfort</h3>
-              <h2 class="text-2xl xl:text-4xl py-1">Standard Room</h2>
-              <p class="py-1">From 150$ /night</p>
-              <p>
+              <h3 class="text-orange-600 red-heading"></h3>
+              <h2 class="text-2xl xl:text-4xl py-1 room-type">Standard Room</h2>
+              <p class="py-1 price">From 150$ /night</p>
+              <p class="room-desc">
                 with wide and comfortable areas and daylight pouring in from
                 the..
               </p>
@@ -252,13 +260,13 @@
                 >View Deatails</a
               >
             </div>
-            <div class="xl:w-3/4">
-              <img src="./img/hotel-slide-1.jpg" alt="" />
+            <div class="slide1 xl:w-3/4">
+              <img src="" alt="hotel-1" class="" />
             </div>
           </div>
 
           <div
-            class="swiper-slide bg-[#0a205c] flex xl:flex-row flex-col items-center"
+            class="swiper-slide slide-2 bg-[#0a205c] flex xl:flex-row flex-col items-center"
           >
             <div class="bg-[#0a205c] xl:w-1/2 p-6">
               <h3 class="text-orange-600">Elegance and comfort</h3>
@@ -291,7 +299,7 @@
               >
             </div>
             <div class="xl:w-3/4">
-              <img src="./img/hotel-slide-1.jpg" alt="" />
+              <img src="" alt="hotel-2" />
             </div>
           </div>
         </div>
@@ -310,7 +318,7 @@
           class="card-cuisine flex xl:flex-row justify-center items-center xl:items-start flex-col px-2"
         >
           <div class="flex items-center xl:items-start">
-            <img class="" src="./img/cuisine-logo.svg" alt="" />
+            <img class="" src="./img/cuisine-logo.svg" alt="cuisine" />
           </div>
           <div class="p-2">
             <h3 class="xl:text-4xl">Unique cuisine</h3>
@@ -325,7 +333,7 @@
           class="card-cuisine flex xl:flex-row flex-col items-center xl:items-start px-2"
         >
           <div class="flex items-center xl:items-start">
-            <img class="" src="./img/yoga.svg" alt="" />
+            <img class="" src="./img/yoga.svg" alt="yoga" />
           </div>
           <div class="p-2">
             <h3 class="xl:text-3xl">Dedicated to wellness</h3>
@@ -341,7 +349,7 @@
           class="card-cuisine xl:flex-row flex-col items-center xl:items-start flex"
         >
           <div class="flex items-center xl:items-start">
-            <img src="./img/location.svg" alt="" />
+            <img src="./img/location.svg" alt="location" />
           </div>
           <div class="p-2">
             <h3 class="xl:text-3xl">Perfect Location</h3>
@@ -414,56 +422,40 @@
         </p>
       </div>
       <div class="flex flex-col xl:flex-row p-5">
-        <div class="card-1 p-4">
+        <div class="xl:w-1/4 card-1 p-4">
           <div class="">
-            <img class="w-full" src="./img/card-1.jpg" alt="" />
+            <img class="w-full" src="" alt="card-logo" />
           </div>
-          <p class="py-3">WELLNESS</p>
-          <h3 class="xl:text-2xl py-3">Dedicated to wellness</h3>
-          <p class="">
-            Aman's approach to wellness is focused on personalisation, privacy
-            and seclusion. Local spa rituals with indigenous ingredients, offer
-            a profoundly therapeutic touch, and a gentle sense of discovery.
-          </p>
+          <p class="py-3"></p>
+          <h3 class="xl:text-2xl py-3"></h3>
+          <p class="card-desc1"></p>
           <a class="mt-3" href="#">Discover more →</a>
         </div>
-        <div class="card-1 p-4">
+        <div class="xl:w-1/4 card-2 p-4">
           <div>
-            <img class="w-full" src="./img/card3.jpg" alt="" />
+            <img class="w-full" src="" alt="card-logo" />
           </div>
-          <p class="py-3">WELLNESS</p>
-          <h3 class="xl:text-2xl py-3">Dedicated to wellness</h3>
-          <p class="">
-            Aman's approach to wellness is focused on personalisation, privacy
-            and seclusion. Local spa rituals with indigenous ingredients, offer
-            a profoundly therapeutic touch, and a gentle sense of discovery.
-          </p>
+          <p class="py-3"></p>
+          <h3 class="xl:text-2xl py-3"></h3>
+          <p class="card-desc2"></p>
           <a class="mt-3" href="#">Discover more →</a>
         </div>
-        <div class="card-1 p-4">
+        <div class="xl:w-1/4 card-3 p-4">
           <div>
-            <img class="w-full" src="./img/card2.jpg" alt="" />
+            <img class="w-full" src="" alt="card-logo" />
           </div>
-          <p class="py-3">WELLNESS</p>
-          <h3 class="xl:text-2xl py-3">Dedicated to wellness</h3>
-          <p class="">
-            Aman's approach to wellness is focused on personalisation, privacy
-            and seclusion. Local spa rituals with indigenous ingredients, offer
-            a profoundly therapeutic touch, and a gentle sense of discovery.
-          </p>
+          <p class="py-3"></p>
+          <h3 class="xl:text-2xl py-3"></h3>
+          <p class="card-desc3"></p>
           <a class="mt-3" href="#">Discover more →</a>
         </div>
-        <div class="card-1 p-4">
+        <div class="xl:w-1/4 card-4 p-4">
           <div>
-            <img class="w-full" src="./img/card4.jpg" alt="" />
+            <img class="w-full" src="" alt="card-logo" />
           </div>
-          <p class="py-3">WELLNESS</p>
-          <h3 class="xl:text-2xl py-3">Dedicated to wellness</h3>
-          <p class="">
-            Aman's approach to wellness is focused on personalisation, privacy
-            and seclusion. Local spa rituals with indigenous ingredients, offer
-            a profoundly therapeutic touch, and a gentle sense of discovery.
-          </p>
+          <p class="py-3"></p>
+          <h3 class="xl:text-2xl py-3"></h3>
+          <p class="card-desc4"></p>
           <a class="mt-3" href="#">Discover more →</a>
         </div>
       </div>
@@ -491,7 +483,7 @@
         <div class="review-1 p-5">
           <div class="card-top flex justify-between items-center">
             <div class="flex">
-              <img src="./img/our-client-1.png" alt="" />
+              <img src="./img/our-client-1.png" alt="client" />
               <div>
                 <p>Selena Mayer</p>
                 <p>2021-01-10</p>
@@ -499,7 +491,7 @@
             </div>
 
             <div class="w-[10%]">
-              <img src="./img/owl-logo.png" alt="" />
+              <img src="./img/owl-logo.png" alt="owl" />
             </div>
           </div>
           <div>
@@ -514,7 +506,7 @@
         <div class="review-2 p-5">
           <div class="card-top flex justify-between items-center">
             <div class="flex">
-              <img src="./img/our-client-2.png" alt="" />
+              <img src="./img/our-client-2.png" alt="client" />
               <div>
                 <p>Esther Howard</p>
                 <p>2021-08-10</p>
@@ -522,7 +514,7 @@
             </div>
 
             <div class="w-[10%]">
-              <img src="./img/owl-logo.png" alt="" />
+              <img src="./img/owl-logo.png" alt="owl" />
             </div>
           </div>
           <div>
@@ -537,7 +529,7 @@
         <div class="review-1 p-5">
           <div class="card-top flex justify-between items-center">
             <div class="flex">
-              <img src="./img/our-client-3.png" alt="" />
+              <img src="./img/our-client-3.png" alt="client" />
               <div>
                 <p>Jane Cooper</p>
                 <p>2021-04-10</p>
@@ -545,7 +537,7 @@
             </div>
 
             <div class="w-[10%]">
-              <img src="./img/owl-logo.png" alt="" />
+              <img src="./img/owl-logo.png" alt="owl" />
             </div>
           </div>
           <div>
@@ -563,7 +555,7 @@
       <div class="flex xl:flex-row flex-col p-10">
         <div class="xl:w-1/2">
           <div class="text-center xl:text-start">
-            <img src="./img/folwer-icon.png" alt="" />
+            <img src="./img/folwer-icon.png" alt="flower-icon" />
             <span>GETTING HERE</span>
             <h2 class="xl:text-4xl text-2xl py-1">How to Get there?</h2>
             <p>
@@ -610,12 +602,14 @@
         </div>
       </div>
     </section>
-    <section class="bg-skin flex xl:flex-row flex-col justify-between">
+    <section class="nature bg-skin flex xl:flex-row flex-col justify-between">
       <div class="with-nature xl:mt-[-3rem] flex">
-        <div><img class="p-2" src="./img/with-nature-3.jpg" alt="" /></div>
+        <div>
+          <img class="p-2" src="./img/with-nature-3.jpg" alt="nature-1" />
+        </div>
         <div class="flex flex-col mt-1">
-          <img class="p-1" src="./img/with-nature-1.jpg" alt="" />
-          <img class="p-1" src="./img/with-nature-2.jpg" alt="nature" />
+          <img class="p-1" src="./img/with-nature-1.jpg" alt="nature-2" />
+          <img class="p-1" src="./img/with-nature-2.jpg" alt="nature-3" />
         </div>
       </div>
       <div class="flex justify-center relative items-center flex-col">
@@ -703,28 +697,34 @@
                 >
               </li>
               <li class="mt-2">
-                <a href="#" class="hover:underline hover:text-white">blog</a>
+                <a href="#" class="hover:underline hover:text-white">Blog</a>
               </li>
               <li class="mt-2">
-                <a href="#" class="hover:underline hover:text-white ">Gift Cards</a>
+                <a href="#" class="hover:underline hover:text-white"
+                  >Gift Cards</a
+                >
               </li>
             </ul>
           </div>
           <div>
             <h4 class="py-3 text-2xl text-white font-bold">Services</h4>
             <ul>
-              <li class="mt-2"><a href="#" class="hover:underline hover:text-white ">Spa</a></li>
               <li class="mt-2">
-                <a href="#" class="hover:underline hover:text-white ">Experience</a>
+                <a href="#" class="hover:underline hover:text-white">Spa</a>
               </li>
               <li class="mt-2">
-                <a href="#" class="hover:underline hover:text-white ">Wedding</a>
+                <a href="#" class="hover:underline hover:text-white"
+                  >Experience</a
+                >
               </li>
               <li class="mt-2">
-                <a href="#" class="hover:underline hover:text-white ">Dining</a>
+                <a href="#" class="hover:underline hover:text-white">Wedding</a>
               </li>
               <li class="mt-2">
-                <a href="#" class="hover:underline hover:text-white ">Events</a>
+                <a href="#" class="hover:underline hover:text-white">Dining</a>
+              </li>
+              <li class="mt-2">
+                <a href="#" class="hover:underline hover:text-white">Events</a>
               </li>
             </ul>
           </div>
@@ -732,19 +732,29 @@
             <h4 class="py-3 text-2xl text-white font-bold">Quick Links</h4>
             <ul>
               <li class="mt-2">
-                <a href="#" class="hover:underline hover:text-white ">Facilities</a>
+                <a href="#" class="hover:underline hover:text-white"
+                  >Facilities</a
+                >
               </li>
               <li class="mt-2">
-                <a href="#" class="hover:underline hover:text-white ">Accommodation</a>
+                <a href="#" class="hover:underline hover:text-white"
+                  >Accommodation</a
+                >
               </li>
               <li class="mt-2">
-                <a href="#" class="hover:underline hover:text-white ">Reservations</a>
+                <a href="#" class="hover:underline hover:text-white"
+                  >Reservations</a
+                >
               </li>
               <li class="mt-2">
-                <a href="#" class="hover:underline hover:text-white " >Why Choose Us</a>
+                <a href="#" class="hover:underline hover:text-white"
+                  >Why Choose Us</a
+                >
               </li>
               <li class="mt-2">
-                <a href="#" class="hover:underline hover:text-white ">Our Restaurant</a>
+                <a href="#" class="hover:underline hover:text-white"
+                  >Our Restaurant</a
+                >
               </li>
             </ul>
           </div>
@@ -754,7 +764,11 @@
           <p class="mt-5">Toll Free Customer Support</p>
           <p class="text-lightblue">(+123)1500-456-7890</p>
           <p class="mt-10">Need Live Support?</p>
-          <a href="#"><p class="text-lightblue">reservations@miklto.com</p></a>
+          <a href="#"
+            ><p class="text-lightblue hover:underline hover:text-white">
+              reservations@miklto.com
+            </p></a
+          >
         </div>
       </div>
       <hr class="w-full mt-2 w-[10%]" />

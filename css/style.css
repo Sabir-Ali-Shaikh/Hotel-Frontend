@@ -7,7 +7,7 @@
 }
 
 .landingSection {
-  background: url(../img/bg.svg) no-repeat;
+  background: no-repeat;
   background-size: cover;
 }
 
@@ -24,6 +24,6 @@
   background-color: #fffaf6;
 }
 
-.text-lightblue{
+.text-lightblue {
   color: #4966b8;
 }
