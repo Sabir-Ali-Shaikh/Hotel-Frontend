@@ -9,8 +9,8 @@ const card3 = document.querySelector(".card-3");
 const card4 = document.querySelector(".card-4");
 const slide1 = document.querySelector(".slide1");
 const slide2 = document.querySelector(".slide-2");
-
 const redHead = document.querySelector(".red-heading");
+const subscribeButton = document.querySelector(".subscribe");
 
 navToggle.addEventListener("click", function () {
   links.classList.toggle("show_nav");
@@ -25,22 +25,32 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 subBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  fetch("http://localhost:5000/", {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-    body: JSON.stringify({
-      id: Date.now(),
-      checkInDate: form.checkin.value,
-      checkOutDate: form.checkout.value,
-      adultsNumber: form.adults.value,
-      childrenNumber: form.children.value,
-    }),
-  }).then((res) => {
-    console.log("data posted", res);
-  });
+  if (
+    form.checkin.value.trim().length > 0 &&
+    form.checkout.value.trim().length > 0 &&
+    form.adults.value.trim().length > 0 &&
+    form.children.value.trim().length > 0
+  ) {
+    e.preventDefault();
+    fetch("http://localhost:5000/", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+      body: `id=${Date.now()}&checkInDate=${form.checkin.value}&checkOutDate=${
+        form.checkout.value
+      }&noOfAdults=${form.adults.value}&noOfchildren=${form.children.value}`,
+    }).then((res) => {
+      console.log("data potsed", res);
+      subBtn.textContent = "Submitted";
+      form.checkin.value = "";
+      form.checkout.value = "";
+      form.children.value = "";
+      form.adults.value = "";
+    });
+  } else {
+    alert("Fill the form Correctly");
+  }
 });
 
 function addTop(d) {
@@ -115,3 +125,18 @@ async function getSlideData() {
   getCardData();
   getSlideData();
 })();
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "en",
+
+      autoDisplay: "true",
+
+      includedLanguages: "hi,en,bn,id,fr",
+
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+    },
+    "google_translate_element"
+  );
+}
