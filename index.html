@@ -81,7 +81,7 @@
           <a
             href="#"
             class="nav-links hover:bg-[#0a205c] hover:text-white rounded-lg p-3"
-            >contact</a
+            >Contact</a
           >
         </li>
       </ul>
@@ -102,15 +102,15 @@
         class="landing-text flex p-6 flex-col items-start text-white xl:w-1/2"
       >
         <div class="text-center xl:text-start">
-          <h1 class="text-5xl xl:text-7xl py-2"></h1>
-          <p class="xl:text-2xl"></p>
+          <h1 class="text-5xl drop-shadow xl:text-7xl py-2"></h1>
+          <p class="xl:text-2xl drop-shadow"></p>
         </div>
         <div
           class="flex text-center justify-between items-center mt-5 w-full xl:w-[50%]"
         >
           <a href="#" class="hover:bg-white hover:text-black p-3">About Us</a>
           <a href="#" class="hover:bg-white hover:text-black p-3"
-            >View HomeStay -></a
+            >View HomeStay →</a
           >
         </div>
       </div>
@@ -177,17 +177,19 @@
             </div>
           </div>
           <div class="flex pl-5 flex-col justify-center">
-            <i class="fa-solid fa-user"></i>
-            <label for="Children">Children</label>
-            <input
-              placeholder="Enter Number of Children"
-              type="number"
-              required
-              min="0"
-              class="w-[90%] border-b-2"
-              name="children"
-              id="date"
-            />
+            <div>
+              <i class="fa-solid fa-user"></i>
+              <label for="Children">Children</label>
+              <input
+                placeholder="Enter Number of Children"
+                type="number"
+                required
+                min="0"
+                class="w-[90%] border-b-2"
+                name="children"
+                id="date"
+              />
+            </div>
           </div>
           <div class="flex my-5 justify-center">
             <button
@@ -340,7 +342,7 @@
         <div
           class="card-cuisine flex xl:flex-row justify-center items-center xl:items-start flex-col px-2"
         >
-          <div class="flex items-center xl:items-start">
+          <div class="flex w-[20%] xl:w-[50%] items-center xl:items-start">
             <img class="" src="./img/why-us/cuisine-logo.svg" alt="cuisine" />
           </div>
           <div class="p-2">
@@ -355,7 +357,7 @@
         <div
           class="card-cuisine flex xl:flex-row flex-col items-center xl:items-start px-2"
         >
-          <div class="flex items-center xl:items-start">
+          <div class="flex w-[20%] xl:w-[50%] items-center xl:items-start">
             <img class="" src="./img/why-us/yoga.svg" alt="yoga" />
           </div>
           <div class="p-2">
@@ -371,7 +373,7 @@
         <div
           class="card-cuisine xl:flex-row flex-col items-center xl:items-start flex"
         >
-          <div class="flex items-center xl:items-start">
+          <div class="flex w-[20%] xl:w-[50%] items-center xl:items-start">
             <img src="./img/why-us/location.svg" alt="location" />
           </div>
           <div class="p-2">
@@ -404,7 +406,7 @@
             tortor.
           </p>
           <div class="mt-6">
-            <a href="#" class="hover:bg-white rounded-lg hover:text-black p-3"
+            <a href="#" class="hover:border-[1px] hover:text-white p-3"
               >Explore More</a
             >
           </div>
@@ -438,8 +440,8 @@
             <li>▪ Relax and therapy massage Book your stay</li>
           </ul>
           <div class="mt-6">
-            <a href="#" class="hover:bg-white rounded-lg hover:text-black p-3"
-              >Explore More</a
+            <a href="#" class="hover:border-[1px] hover:text-white p-3"
+              >Book Your Stay →</a
             >
           </div>
         </div>
@@ -450,8 +452,8 @@
     <!-- Cards Starts -->
     <section class="card m-5">
       <div class="flex flex-col items-center">
-        <h2 class="font-bold italic">EXPERIENCE MATTERS</h2>
-        <p class="text-2xl xl:text-4xl xl:w-[60%] p-2">
+        <h2 class="font-bold">EXPERIENCE MATTERS</h2>
+        <p class="text-3xl text-center xl:text-4xl xl:w-[60%] p-2">
           Escape From the World see the Experience before you feel it, Discover
           the luxury of hotel Miklto
         </p>
@@ -519,13 +521,13 @@
     <!-- Say Hello End -->
 
     <!-- Review Starts -->
-    <section class="review bg-skin flex justify-center">
+    <section class="review bg-skin flex justify-center py-10">
       <div class="review flex p-5 w-[80%] flex-col xl:flex-row">
         <div class="review-1 p-5">
           <div class="card-top flex justify-between items-center">
-            <div class="flex">
+            <div class="flex items-center justify-start">
               <img src="./img/reviews/our-client-1.png" alt="client" />
-              <div>
+              <div class="pl-3">
                 <p>Selena Mayer</p>
                 <p>2021-01-10</p>
               </div>
@@ -536,6 +538,13 @@
             </div>
           </div>
           <div>
+            <div class="flex justify-start">
+              <span class="green-dot mt-2 mr-1"></span>
+              <span class="green-dot mt-2 mr-1"></span>
+              <span class="green-dot mt-2 mr-1"></span>
+              <span class="green-dot mt-2 mr-1"></span>
+              <span class="green-dot mt-2 mr-1"></span>
+            </div>
             <h3 class="font-bold py-2">Wonderful New Year trip</h3>
             <p>
               "One of the best hotels I've ever stayed in. The staff are very
@@ -546,9 +555,9 @@
         </div>
         <div class="review-2 p-5">
           <div class="card-top flex justify-between items-center">
-            <div class="flex">
+            <div class="flex items-center justify-start">
               <img src="./img/reviews/our-client-2.png" alt="client" />
-              <div>
+              <div class="pl-3">
                 <p>Esther Howard</p>
                 <p>2021-08-10</p>
               </div>
@@ -557,6 +566,13 @@
             <div class="w-[10%]">
               <img src="./img/reviews/owl-logo.png" alt="owl" />
             </div>
+          </div>
+          <div class="flex justify-start">
+            <span class="green-dot mt-2 mr-1"></span>
+            <span class="green-dot mt-2 mr-1"></span>
+            <span class="green-dot mt-2 mr-1"></span>
+            <span class="green-dot mt-2 mr-1"></span>
+            <span class="half-blank-dot mt-2 mr-1"></span>
           </div>
           <div>
             <h3 class="font-bold py-2">Recommended</h3>
@@ -567,11 +583,11 @@
             </p>
           </div>
         </div>
-        <div class="review-1 p-5">
+        <div class="review-3 p-5">
           <div class="card-top flex justify-between items-center">
-            <div class="flex">
+            <div class="flex items-center justify-start">
               <img src="./img/reviews/our-client-3.png" alt="client" />
-              <div>
+              <div class="pl-3">
                 <p>Jane Cooper</p>
                 <p>2021-04-10</p>
               </div>
@@ -580,6 +596,13 @@
             <div class="w-[10%]">
               <img src="./img/reviews/owl-logo.png" alt="owl" />
             </div>
+          </div>
+          <div class="flex justify-start">
+            <span class="green-dot mt-2 mr-1"></span>
+            <span class="green-dot mt-2 mr-1"></span>
+            <span class="green-dot mt-2 mr-1"></span>
+            <span class="green-dot mt-2 mr-1"></span>
+            <span class="half-blank-dot mt-2 mr-1"></span>
           </div>
           <div>
             <h3 class="font-bold py-2">All Good</h3>
