@@ -24,6 +24,26 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+subscribeButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (mail.email.value.match(mailFormat)) {
+    fetch("http://localhost:5000/email-data", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+      body: `id=${Date.now()}&Email=${mail.email.value}`,
+    }).then((res) => {
+      console.log("Data posted", res);
+      subscribeButton.textContent = "DONE";
+      mail.email.value = "";
+    });
+  } else {
+    alert("Enter Valid Email Address");
+  }
+});
+
 subBtn.addEventListener("click", (e) => {
   if (
     form.checkin.value.trim().length > 0 &&
@@ -32,7 +52,7 @@ subBtn.addEventListener("click", (e) => {
     form.children.value.trim().length > 0
   ) {
     e.preventDefault();
-    fetch("http://localhost:5000/", {
+    fetch("http://localhost:5000/form-data", {
       method: "POST",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -125,18 +145,3 @@ async function getSlideData() {
   getCardData();
   getSlideData();
 })();
-
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement(
-    {
-      pageLanguage: "en",
-
-      autoDisplay: "true",
-
-      includedLanguages: "hi,en,bn,id,fr",
-
-      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
-    },
-    "google_translate_element"
-  );
-}
