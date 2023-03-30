@@ -12,7 +12,7 @@
 }
 
 .say-hello {
-  background: url(../img/say-hello.jpg) no-repeat;
+  background: url(../img/say-hello/say-hello.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -26,11 +26,4 @@
 
 .text-lightblue {
   color: #4966b8;
-}
-
-.goog-logo-link {
-  display: none !important;
-}
-.goog-te-gadget {
-  color: transparent !important;
 }
